@@ -19,7 +19,7 @@ void	ft_deque_push_back(t_deque **begin_deque, void *data)
 	t_deque	*new_node;
 
 	new_node = ft_create_deque_elem(data);
-	if (begin_deque)
+	if (*begin_deque)
 	{
 		last = ft_deque_last(*begin_deque);
 		last->next = new_node;

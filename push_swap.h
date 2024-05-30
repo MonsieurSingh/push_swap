@@ -17,7 +17,7 @@
 # include "libft.h"
 # include "deque/deque.h"
 
-void	init(t_deque **a, t_deque **b, char **argv);
+void	init(t_deque **a, t_deque **b, int argc, char **argv);
 int		verify(char **arguments);
 
 #endif /* PUSH_SWAP_H */
