@@ -28,6 +28,26 @@ static int	trim_arguments(char **arguments)
 	return (0);
 }
 
+static int	check_duplicates(char **arguments)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (arguments[i + 1])
+	{
+		j = i + 1;
+		while (arguments[j])
+		{
+			if (ft_atoi(arguments[i]) == ft_atoi(arguments[j]))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
 int	verify(char **arguments)
 {
 	int	i;
@@ -43,11 +63,13 @@ int	verify(char **arguments)
 			if (j == 0 && arguments[i][j] != '-'
 				&& arguments[i][j] != '+' && !ft_isdigit(arguments[i][j]))
 				return (1);
-			if (!ft_isdigit(arguments[i][j]))
+			if (!ft_isdigit(arguments[i][j]) && j != 0)
 				return (1);
 			j++;
 		}
 		i++;
 	}
+	if (check_duplicates(arguments))
+		return (1);
 	return (0);
 }

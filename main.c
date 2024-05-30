@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-	verify(argv);
+	if (verify(argv))
+		ft_putstr_fd("Error\n", 1);
 	init(&a, &b, argv + 1);
 	return (0);
 }
