@@ -1,12 +1,23 @@
-//
-//  push_swap.h
-//  push_swap
-//
-//  Created by Teghjyot Singh on 15/5/2024.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tesingh <tesingh@student.42adel.org.au>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/30 06:16:48 by tesingh           #+#    #+#             */
+/*   Updated: 2024/05/30 06:16:52 by tesingh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef push_swap_h
-#define push_swap_h
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
+# include <unistd.h>
+# include "libft.h"
+# include "deque/deque.h"
 
-#endif /* push_swap_h */
+void	init(t_deque **a, t_deque **b, char **argv);
+int		verify(char **arguments);
+
+#endif /* PUSH_SWAP_H */
